@@ -18,7 +18,13 @@ void ofApp::update(){
 void ofApp::draw(){
     ofEnableAlphaBlending();
     if(lastTouch.x!=0 && lastTouch.y!=0){
-        ofSetColor(114,176,140);
+//HW5 Section!!
+//Add an If/Else statement to change the color of the circle if the location of the mouse point is below or above 240 in Y axis
+        if(lastTouch.y < 240) {
+        ofSetColor(247,7,87);
+        }
+        else { ofSetColor(114,176,140); }
+    
         ofFill();
         ofCircle(lastTouch.x,lastTouch.y, 30);
     }
